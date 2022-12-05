@@ -5,11 +5,11 @@ import icon from '../../../images/icon/tourism icon (1).png'
 
 const Header = () => {
     return (
-        <div className='mb-5'>
-            <Navbar fixed='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <div>
+            <Navbar fixed='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">
-                        <img width={40} src={icon} alt="" />
+                        <img className='me-20 rounded-circle' width={40} src={icon} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
