@@ -5,8 +5,8 @@ import icon from '../../../images/icon/tourism icon (1).png'
 
 const Header = () => {
     return (
-        <div>
-            <Navbar fixed='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
+        <div >
+            <Navbar className='mb-3' fixed='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">
                         <img className='me-20 rounded-circle' width={40} src={icon} alt="" />
@@ -19,10 +19,10 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link href="#memes">
-                                Dank memes
+                            <Nav.Link as={Link} to="/login">
+                                Login
                             </Nav.Link>
+                            <Nav.Link as={Link} to="register">Register</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
