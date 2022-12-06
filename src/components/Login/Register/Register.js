@@ -1,23 +1,32 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Register = () => {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
+    const [agree, setAgree] = useState(false)
+    const navigate = useNavigate()
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    
+    if(loading || updating){
+        return <Loading></Loading>
+    }
 
     const handleName = event => {
         setName(event.target.value);
@@ -35,6 +44,12 @@ const Register = () => {
         event.preventDefault();
         event.target.reset();
         await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName: name })
+        navigate('/home')
+    }
+
+    if(user){
+        console.log('user', user)
     }
 
 
@@ -58,11 +73,16 @@ const Register = () => {
                     <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button className='reg-btn w-50 mb-3' variant="warning" type="submit">
+                <input onClick={() =>setAgree(!agree)} type="checkbox" name="" id="" />
+                <label className={`ps-2 ${!agree ? ''  : 'text-primary' }`} htmlFor="">Accept Latest Tourism Guide terms & conditions</label>
+
+                <Button disabled={!agree} className='reg-btn w-50 mb-3 d-block mx-auto mt-3' variant="warning" type="submit">
                     Register
                 </Button>
             </Form>
-            <p>Already register? <Link className='text-warning text-decoration-none' to='/login'>Please Login</Link></p>
+            <p className='text-center'>Already register? 
+            <br />
+            <Link className='text-primary text-decoration-none' to='/login'>Please Login</Link></p>
             <SocialLogin />
         </div>
     );

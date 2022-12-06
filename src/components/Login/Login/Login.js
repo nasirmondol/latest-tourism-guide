@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -13,12 +14,21 @@ const Login = () => {
     const navigate = useNavigate()
     let errorElement;
 
+    const location = useLocation()
+    const from = location.state?.from?.pathname || ('/')
+
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+    if(loading || sending){
+        return <Loading></Loading>
+    }
 
     if (error) {
         errorElement = <div>
@@ -41,7 +51,12 @@ const Login = () => {
     }
 
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true })
+    }
+
+    const resetPassword = async () => {
+        await sendPasswordResetEmail(email);
+        alert('Sent email');
     }
 
     return (
@@ -60,11 +75,18 @@ const Login = () => {
                 </Form.Group>
                 <p>{errorElement}</p>
 
-                <Button className='reg-btn w-50 mb-3' variant="warning" type="submit">
+                <Button className='reg-btn w-50 mb-3 d-block mx-auto' variant="warning" type="submit">
                     Login
                 </Button>
             </Form>
-            <p>New to our site? <Link className='text-warning text-decoration-none' to='/register'>Please Register</Link></p>
+            <p className='text-center'>Forgot Password?
+                <br />
+                <Link onClick={resetPassword} className='text-primary text-decoration-none'>Reset your Password</Link></p>
+            <br />
+
+            <p className='text-center'>New to our site?
+                <br />
+                <Link className='text-primary text-decoration-none' to='/register'>Please Register</Link></p>
             <SocialLogin></SocialLogin>
         </div>
     );

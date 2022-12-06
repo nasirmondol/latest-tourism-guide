@@ -1,5 +1,5 @@
 import './App.css';
-import {  Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home/Home';
 import Header from './components/Shared/Header/Header';
 import NotFound from './components/NotFound/NotFound';
@@ -8,20 +8,25 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Footer from './components/Shared/Footer/Footer';
 import Register from './components/Login/Register/Register';
 import Login from './components/Login/Login/Login';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 function App() {
   return (
     <div>
-        <Header></Header>
-        <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/home' element={<Home />}></Route>
-          <Route path='/details/:serviceId' element={<ServiceDetails/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
-          <Route path='/register' element={<Register/>}></Route>
-          <Route path='*' element={<NotFound/>}></Route>
-        </Routes>
-        <Footer/>
+      <Header></Header>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/details/:serviceId' element={
+          <RequireAuth>
+            <ServiceDetails />
+          </RequireAuth>
+        }></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
+      </Routes>
+      <Footer />
     </div>
   );
 }
