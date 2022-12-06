@@ -2,10 +2,22 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Register.css'
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+
+
 const Register = () => {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleName = event => {
         setName(event.target.value);
@@ -19,10 +31,12 @@ const Register = () => {
         setPassword(event.target.value)
     }
 
-    const handleSubmit = event => {
-        event.preventDefault()
+    const handleSubmit = async event => {
+        event.preventDefault();
         event.target.reset();
+        await createUserWithEmailAndPassword(email, password)
     }
+
 
     return (
         <div className='register w-50 mx-auto'>
@@ -49,6 +63,7 @@ const Register = () => {
                 </Button>
             </Form>
             <p>Already register? <Link className='text-warning text-decoration-none' to='/login'>Please Login</Link></p>
+            <SocialLogin />
         </div>
     );
 };
