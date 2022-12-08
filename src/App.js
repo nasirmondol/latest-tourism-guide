@@ -9,6 +9,10 @@ import Footer from './components/Shared/Footer/Footer';
 import Register from './components/Login/Register/Register';
 import Login from './components/Login/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import MyOrders from './components/MyOrders/MyOrders';
+import About from './components/About/About';
+import AddService from './components/AddService/AddService';
+import ManageService from './components/ManageService/ManageService';
 
 function App() {
   return (
@@ -22,6 +26,22 @@ function App() {
             <ServiceDetails />
           </RequireAuth>
         }></Route>
+        <Route path='/orders' element={
+          <RequireAuth>
+            <MyOrders />
+          </RequireAuth>
+        }></Route>
+        <Route path='/addservice' element={
+          <RequireAuth>
+            <AddService />
+          </RequireAuth>
+        }></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageService />
+          </RequireAuth>
+        }></Route>
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='*' element={<NotFound />}></Route>

@@ -1,1 +1,13 @@
-[{"id":1,"name":"Ice adventure vacation","img":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/ec/25/77/caption.jpg?w=1200&h=-1&s=1","price":200},{"id":2,"name":"National Park","img":"https://www.nps.gov/articles/images/GRSA_NPSphoto_960w.jpg?maxwidth=1200&maxheight=1200&autorotate=false","price":350},{"id":3,"name":"Luxury Hotels","img":"https://i.ibb.co/sRPg2fF/luxury-hotel-1.jpg","price":400},{"id":4,"name":"Cox-Bazar Sea beach","img":"https://i.ibb.co/2F7G0pv/sea-beach-1.jpg","price":220},{"id":5,"name":"Kuakata Sea beach","img":"https://i.ibb.co/3Fq0LyD/potenga-1.png","price":300},{"id":6,"name":"Istanbul","img":"https://i.ibb.co/6YYR6TM/istanbul-1.jpg","price":1000}]
+[
+    {"name":"Ice adventure vacation","description": "Visit West Norfolk, a truly special place of unspoilt charm and natural beauty. History and Heritage. Stunning Coastline. Breathtaking Countryside. Sign-up to our Newsletter.","img":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/ec/25/77/caption.jpg?w=1200&h=-1&s=1","price":200},
+
+    {"name":"National Park, USA","description": "From travel requirements, cleaning protocols, and safety measures, to personalization, business travel, and of course, sustainability. Discover the travel trends for 2022.","img":"https://www.nps.gov/articles/images/GRSA_NPSphoto_960w.jpg?maxwidth=1200&maxheight=1200&autorotate=false","price":350},
+
+    {"name":"Luxury Hotels","description": "Alaska’s Interior provides the perfect backdrop to year-round adventure. Find activities, attractions & tours in and around Fairbanks, Alaska. Visitor Information.","img":"https://i.ibb.co/sRPg2fF/luxury-hotel-1.jpg","price":400},
+
+    {"name":"Cox-Bazar Sea beach","description": "A travel website is a website that provides travel reviews, trip fares, or a combination of both. Over 1.5 billion people book travel per year, 70% of which is done online.","img":"https://i.ibb.co/2F7G0pv/sea-beach-1.jpg","price":220},
+
+    {"name":"Kuakata Sea beach", "description": "Exhibit the Experience: Lay out in great detail the tour while keeping the curiosity factor. Use sub-headlines and short paragraphs to break up the information,","img":"https://i.ibb.co/3Fq0LyD/potenga-1.png","price":300},
+
+    {"name":"Istanbul","description": "Below, take a closer look at how some of the best tourism websites in the world inspire wanderlust in travelers worldwide. Then try some of their visual ","img":"https://i.ibb.co/6YYR6TM/istanbul-1.jpg","price":1000}
+]
