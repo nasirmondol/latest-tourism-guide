@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import useServiceDetails from '../../hooks/useServiceDetails';
@@ -10,6 +10,8 @@ const CheckOut = () => {
     const { serviceId } = useParams();
     const [services] = useServiceDetails(serviceId)
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
+
 
     if (user) {
         console.log(user)
@@ -30,9 +32,11 @@ const CheckOut = () => {
                 if(data.insertedId){
                     toast('Your order is booked!!')
                     event.target.reset()
+                    navigate('/orders')
                 }
             })
     }
+
     return (
         <div className='mt-5 w-50 mx-auto'>
             <br />
