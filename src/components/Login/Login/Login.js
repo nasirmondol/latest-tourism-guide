@@ -9,6 +9,7 @@ import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('')
