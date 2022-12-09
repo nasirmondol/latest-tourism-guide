@@ -13,6 +13,7 @@ import MyOrders from './components/MyOrders/MyOrders';
 import About from './components/About/About';
 import AddService from './components/AddService/AddService';
 import ManageService from './components/ManageService/ManageService';
+import CheckOut from './components/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
         <Route path='/details/:serviceId' element={
           <RequireAuth>
             <ServiceDetails />
+          </RequireAuth>
+        }></Route>
+        <Route path='/checkout/:serviceId' element={
+          <RequireAuth>
+            <CheckOut />
           </RequireAuth>
         }></Route>
         <Route path='/orders' element={

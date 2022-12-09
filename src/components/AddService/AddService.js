@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import './AddService.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const AddService = () => {
@@ -22,6 +23,7 @@ const AddService = () => {
             })
         toast('Services added to the UI')
     };
+
     return (
         <div className='add text-center w-50 mx-auto'>
             <h2 className='mb-3'>Add a new service please</h2>
