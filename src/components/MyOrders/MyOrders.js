@@ -20,12 +20,12 @@ const MyOrders = () => {
         <div>
             <br />
             <br />
-            <h2 className='text-center mt-3'>Your order: {orders.length}</h2>
+            <h2 className='text-center mt-3 mb-3'>Your orders: {orders.length}</h2>
             {
                 orders.map(order => <div className='orders w-50 mx-auto mb-4' key={order._id}>
                     <h5 className='text-center'>{order.services}</h5>
                     <h5 className='text-center'>{order.address}</h5>
-                    <p className='text-center'>{order.email}</p>
+                    <p className='text-center mb-0'>{order.email}</p>
                     <p className='text-center'>{order.phone}</p>
                 </div>)
             }
