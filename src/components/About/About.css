@@ -1,15 +1,20 @@
-.about{
+.about {
     margin-top: 70px;
 }
- 
-.address{
+
+.address {
     margin-left: 30px;
     margin-top: 100px;
 }
 
-@media screen and (max-width: 600px) {
-    .about-section{
-        grid-template-columns: repeat(1, 1fr);
+@media screen and(max-width: 600px) {
+    .about-section1 {
+        width: 100%;
+    }
+}
+
+@media screen and(max-width: 600px) {
+    .address {
         width: 100%;
     }
 }

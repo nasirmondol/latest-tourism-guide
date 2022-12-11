@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import { FaFacebook } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import useServiceDetails from '../../hooks/useServiceDetails';
 import './ServiceDetails.css'
@@ -16,7 +17,7 @@ const ServiceDetails = () => {
             <p >{services.description}</p>
             <h6>Price: ${services.price}</h6>
             <Link to={`/checkout/${serviceId}`}>
-                <Button  className='mb-5'>Check Out</Button>
+                <Button className='mb-5'>Check Out</Button>
             </Link>
         </div>
     );
