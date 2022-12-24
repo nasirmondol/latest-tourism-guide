@@ -22,7 +22,7 @@ const About = () => {
 
             <div className='about-container d-flex d-block mx-auto w-75'>
                 <div className='about-section1'>
-                    <img className='m-5' width={450} src="https://expertvagabond.com/wp-content/uploads/inspiring-travel-quotes-guide.jpg" alt="" />
+                    <img className='m-4' width={450} src="https://dohanews.co/wp-content/uploads/2022/08/Untitled-design-22.jpg" alt="" />
                 </div>
                 <div className='address'>
                     <h3 className='text-dark'>Connect with us</h3>
