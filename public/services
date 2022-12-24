@@ -1,8 +1,0 @@
-[
-    {"id":1,"name":"Singapure city Tour","img":"https://media.istockphoto.com/id/1138709659/photo/singapore-skyline.jpg?b=1&s=170667a&w=0&k=20&c=VMqWpl_HLQm-_-gdR1-2hRoZT2_uTVanaMNt9JI9xZk=","price":400},
-    {"id":2,"name":"Tour in Dubai","img":"https://media.tacdn.com/media/attractions-splice-spp-674x446/07/74/b5/76.jpg","price":450},
-    {"id":3,"name":"Visit Mosque","img":"https://iqna.ir/files/en/news/2021/3/7/70565_942.jpg","price":700},
-    {"id":4,"name":"Pyramid Golden offer","img":"https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2013/08/thumb_720_450_dreamstime_xxl_17015612-Custom.jpg","price":600},
-    {"id":5,"name":"Qatar Beautiful Stadium","img":"https://static.designboom.com/wp-content/uploads/2019/05/zaha-hadid-al-wakrah-stadium-qatar-world-cup-designboom-01.jpg","price":650},
-    {"id":6,"name":"Turkish nature","img":"https://www.propertyturkey.com/uploads/pages/larg/lake_van.jpg","price":800}
-]

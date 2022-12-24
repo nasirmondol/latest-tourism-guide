@@ -4,7 +4,7 @@ import More from '../More/More';
 const MoreServices = () => {
     const [moreServices, setMoreServices] = useState([])
     useEffect(() =>{
-        fetch('services')
+        fetch('http://localhost:5000/more')
         .then(res => res.json())
         .then(data => setMoreServices(data))
     }, [])
@@ -14,7 +14,7 @@ const MoreServices = () => {
             <div className='services-container w-75'>
                 {
                     moreServices.map(service => <More
-                        key={service.id} 
+                        key={service._id} 
                         service={service}
                         ></More>)
                 }
