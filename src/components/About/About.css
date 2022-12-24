@@ -6,28 +6,3 @@
     margin-left: 30px;
     margin-top: 100px;
 }
-
-@media screen and (max-width: 572px){
-    .about-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and(min-width: 772px) {
-    .about-section1 {
-        width: 25%;
-    }
-}
-
-@media screen and(min-width: 900px) {
-    .address {
-        width: 100%;
-    }
-}
-
-@media screen and(min-width: 901px) {
-    .address {
-        width: 100%;
-    }
-}

@@ -25,7 +25,7 @@ const About = () => {
                     <img className='m-5' width={450} src="https://expertvagabond.com/wp-content/uploads/inspiring-travel-quotes-guide.jpg" alt="" />
                 </div>
                 <div className='address'>
-                    <h3 className='text-success'>Connect with us</h3>
+                    <h3 className='text-dark'>Connect with us</h3>
                     <h6 className='text-dark d-flex align-items-center'><span class="material-symbols-outlined ml-2">
                         mail
                     </span> Email: nasirahmed8202@gmail.com</h6>
