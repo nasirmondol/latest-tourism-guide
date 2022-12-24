@@ -14,18 +14,18 @@ const Header = () => {
         signOut(auth)
     }
     return (
-        <div>
-            <Navbar fixed='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
+        <div className='mb-0'>
+            <Navbar className='mb-0' fixed='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
                 <Container>
-                    <Navbar.Brand href="/">
-                        <img className='me-20 rounded-circle' width={40} src={icon} alt="" />
+                    <Navbar.Brand>
+                        <img className='rounded-circle' width={40} src={icon} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
-
+                            <Nav.Link as={Link} to="/more">More service</Nav.Link>
                         </Nav>
                         <Nav>
 

@@ -13,6 +13,7 @@ import About from './components/About/About';
 import AddService from './components/AddService/AddService';
 import ManageService from './components/ManageService/ManageService';
 import CheckOut from './components/CheckOut/CheckOut';
+import MoreServices from './components/MoreServices/MoreServices';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/more' element={<MoreServices/>}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='*' element={<NotFound />}></Route>

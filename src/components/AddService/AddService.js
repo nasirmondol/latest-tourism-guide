@@ -32,7 +32,7 @@ const AddService = () => {
                 <input className='mb-2' placeholder='Name' type="text" {...register("name")} />
                 <textarea className='mb-2' placeholder='Description' type="text" {...register("description",)} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price",)} />
-                <input className='w-50 d-block mx-auto bg-success text-warning' type="submit" value="Add a new service" />
+                <input className='w-50 d-block mx-auto bg-success text-warning mb-4' type="submit" value="Add a new service" />
             </form>
             <ToastContainer />
         </div>

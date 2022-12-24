@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='mt-0'>
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
@@ -27,7 +27,7 @@ const Banner = () => {
                     <img
                         height={400}
                         className="d-block w-100 "
-                        src="https://cdn.kstdc.co/uploads/2019/09/bus-tour.jpg"
+                        src="https://png.pngtree.com/thumb_back/fh260/back_our/20190622/ourmid/pngtree-blue-minimalist-flat-travel-banner-background-image_223018.jpg"
                         alt=""
                     />
                     

@@ -1,13 +1,8 @@
 [
-    {"name":"Ice adventure vacation","description": "Visit West Norfolk, a truly special place of unspoilt charm and natural beauty. History and Heritage. Stunning Coastline. Breathtaking Countryside. Sign-up to our Newsletter.","img":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/ec/25/77/caption.jpg?w=1200&h=-1&s=1","price":200},
-
-    {"name":"National Park, USA","description": "From travel requirements, cleaning protocols, and safety measures, to personalization, business travel, and of course, sustainability. Discover the travel trends for 2022.","img":"https://www.nps.gov/articles/images/GRSA_NPSphoto_960w.jpg?maxwidth=1200&maxheight=1200&autorotate=false","price":350},
-
-    {"name":"Luxury Hotels","description": "Alaska’s Interior provides the perfect backdrop to year-round adventure. Find activities, attractions & tours in and around Fairbanks, Alaska. Visitor Information.","img":"https://i.ibb.co/sRPg2fF/luxury-hotel-1.jpg","price":400},
-
-    {"name":"Cox-Bazar Sea beach","description": "A travel website is a website that provides travel reviews, trip fares, or a combination of both. Over 1.5 billion people book travel per year, 70% of which is done online.","img":"https://i.ibb.co/2F7G0pv/sea-beach-1.jpg","price":220},
-
-    {"name":"Kuakata Sea beach", "description": "Exhibit the Experience: Lay out in great detail the tour while keeping the curiosity factor. Use sub-headlines and short paragraphs to break up the information,","img":"https://i.ibb.co/3Fq0LyD/potenga-1.png","price":300},
-
-    {"name":"Istanbul","description": "Below, take a closer look at how some of the best tourism websites in the world inspire wanderlust in travelers worldwide. Then try some of their visual ","img":"https://i.ibb.co/6YYR6TM/istanbul-1.jpg","price":1000}
+    {"id":1,"name":"Singapure city Tour","img":"https://media.istockphoto.com/id/1138709659/photo/singapore-skyline.jpg?b=1&s=170667a&w=0&k=20&c=VMqWpl_HLQm-_-gdR1-2hRoZT2_uTVanaMNt9JI9xZk=","price":400},
+    {"id":2,"name":"Tour in Dubai","img":"https://media.tacdn.com/media/attractions-splice-spp-674x446/07/74/b5/76.jpg","price":450},
+    {"id":3,"name":"Visit Mosque","img":"https://iqna.ir/files/en/news/2021/3/7/70565_942.jpg","price":700},
+    {"id":4,"name":"Pyramid Golden offer","img":"https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2013/08/thumb_720_450_dreamstime_xxl_17015612-Custom.jpg","price":600},
+    {"id":5,"name":"Qatar Beautiful Stadium","img":"https://static.designboom.com/wp-content/uploads/2019/05/zaha-hadid-al-wakrah-stadium-qatar-world-cup-designboom-01.jpg","price":650},
+    {"id":6,"name":"Turkish nature","img":"https://www.propertyturkey.com/uploads/pages/larg/lake_van.jpg","price":800}
 ]
