@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([])
     useEffect(() =>{
         const getOrder = async() =>{
-            const url = `http://localhost:5000/order`
+            const url = `https://latest-tourism-guide-server.vercel.app/order`
             const {data} = await axios.get(url)
             setOrders(data);
         }

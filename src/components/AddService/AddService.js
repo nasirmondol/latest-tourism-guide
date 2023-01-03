@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const AddService = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        const url = `http://localhost:5000/service`
+        const url = `https://latest-tourism-guide-server.vercel.app/service`
         fetch(url, {
             method: 'POST',
             headers: {

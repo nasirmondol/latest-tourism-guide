@@ -4,7 +4,7 @@ import More from '../More/More';
 const MoreServices = () => {
     const [moreServices, setMoreServices] = useState([])
     useEffect(() =>{
-        fetch('http://localhost:5000/more')
+        fetch('https://latest-tourism-guide-server.vercel.app/more')
         .then(res => res.json())
         .then(data => setMoreServices(data))
     }, [])
