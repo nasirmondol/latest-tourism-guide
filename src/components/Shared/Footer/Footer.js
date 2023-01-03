@@ -49,6 +49,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className='text-center mt-5'>
+                <p ><small className='text-white'>Copyright By Md. Nasir &copy; {new Date().getFullYear()}</small></p>
+            </div>
         </div>
     );
 };

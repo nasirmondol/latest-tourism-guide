@@ -5,15 +5,6 @@ const Banner = () => {
     return (
         <div className='mt-0'>
             <Carousel>
-                <Carousel.Item interval={1000}>
-                    <img
-                        height={400}
-                        className="d-block w-100"
-                        src="https://travelfuntoosh.com/Content/Images/banner.jpg"
-                        alt=""
-                    />
-                    
-                </Carousel.Item>
                 <Carousel.Item interval={500}>
                     <img
                         height={400}
