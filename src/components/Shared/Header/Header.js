@@ -31,7 +31,7 @@ const Header = () => {
 
                             {
                                 user ?
-                                    <div className='d-flex'>
+                                    <div className='d-flex m-2'>
                                         <Button onClick={handleSingOut}>Log out</Button>
                                         <Nav.Link as={Link} to="/orders">My orders</Nav.Link>
                                         <Nav.Link as={Link} to="/manage">Manage orders</Nav.Link>
